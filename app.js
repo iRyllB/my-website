@@ -31,3 +31,19 @@ function opentab(tabname){
     event.currentTarget.classList.add('active-link');
     document.getElementById(tabname).classList.add('active-tab');
 }
+
+
+//DOWNLOAD CV - (CURRENTLY HAS NO EFFECT/FUNCTION. RESERVED FOR MORE COMPLEX DOWNLOADS)
+document.getElementById('download').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    var link = document.createElement('a');
+    link.href = 'downloadable/cvsample.pdf';
+    link.download = 'Curriculum Vitae Example.pdf';
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+});

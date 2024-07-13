@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c195c0411b.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
 <div id="header">
@@ -16,7 +18,9 @@
                 <li><a href="#">About Me</a></li>
                 <li><a href="#">My Projects</a></li>
                 <li><a href="#">Contact Me</a></li>
+            <i class="fa-solid fa-xmark"></i>
             </ul>
+            <i class="fa-solid fa-bars"></i>
         </nav>
         <div class="header-text">
             <p>A University Student</p>
@@ -46,7 +50,7 @@
                 <div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Python</span><br>Machine Learning</li>
+                            <li><span>  Python</span><br>Machine Learning</li>
                             <li><span>Graphic Designing</span><br>Photomanipulation<br></li>
                             <li><span>Microsoft Office</span><br>Word,Excel,PowerPoint<br></li>
                         </ul>
@@ -60,7 +64,7 @@
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <p>NO WORK EXPERIENCES</p>
+                            <li>NO WORK EXPERIENCES</li>
                         </ul>
                     </div>
                 </div>
@@ -102,21 +106,33 @@
 <!------------------CONTACT ME------------------->
 <div id="contact">
     <div class="container">
-        <div class="">
+        <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p>contact@example.com</p>
-                <p>0912345679</p>
+                <p><i class="fa-solid fa-envelope"></i>contact@example.com</p>
+                <p><i class="fa-solid fa-phone"></i>0912345679</p>
                 <div class="social-icons">
-                    
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
+                <a href="downloadable/cvsample.pdf" download class="btn" id="download-btn">Download CV</a>
             </div>
-            <div class="contact-right"></div>
+            <div class="contact-right">
+                <form>
+                    <input type="Name" placeholder="Your Name" required>
+                    <input type="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn submit">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-
-
+    <div class="copyright">
+        <p>Copyright © iRyllB/Bryll Bryan M. Pon. University of Science and Technology of Southern Philippines - CDO</p>
+    </div>
+</div>                                                   
 <script src="app.js"></script>
 
 </body>
