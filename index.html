@@ -6,134 +6,138 @@
     <title>Personal Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c195c0411b.js" crossorigin="anonymous"></script>
-    
 </head>
 <body>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="images/logo.png" class='logo' alt="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">My Projects</a></li>
-                <li><a href="#">Contact Me</a></li>
-            <i class="fa-solid fa-xmark"></i>
-            </ul>
-            <i class="fa-solid fa-bars"></i>
-        </nav>
-        <div class="header-text">
-            <p>A University Student</p>
-            <h1><span>Wassup!</span> I'm Bryll</h1>
-        </div>
-    </div>
-</div>
-<!-----------------------------------about--------------------------->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/aboutme.png" alt="">
+<!------------HEADER/HOME------------->
+    <section id="header">
+        <div class="container">
+            <nav>   
+                <a href="#header">
+                    <img src="images/logo.png" class="logo" alt="logo">
+                </a>                
+                <ul id="sidemenu">
+                    <li><a href="#header" >Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">My Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <img src="images/moon.png" id="darkmode">
+            </nav>
+            <div class="header-text">
+                <p>A University Student</p>
+                <h1><span>Wassup!</span> I'm Bryll</h1>
             </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>Hi, My name is Bryll Bryan. I am currently a student in the University of Science and Technology of Southern Philippines.
-                    And I have plans to shift major, from Mechanical Engineering to Computer Science to further pursue my passion.
-                    I am mainly currently trying to learn Machine Learning Algorithms with Python. I have plans to further proceed on learning
-                    SQL,R, and C++.
-                </p>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+        </div>
+    </section>
+<!-------------ABOUT--------------->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/aboutme.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, My name is Bryll Bryan. I am currently a student in the University of Science and Technology of Southern Philippines.
+                        And I have plans to shift major, from Mechanical Engineering to Computer Science to further pursue my passion.
+                        I am mainly currently trying to learn Machine Learning Algorithms with Python. I have plans to further proceed on learning
+                        SQL, R, and C++.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Python</span><br>Machine Learning</li>
+                                <li><span>Graphic Designing</span><br>Photomanipulation<br></li>
+                                <li><span>Microsoft Office</span><br>Word, Excel, PowerPoint<br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>College (2023-Present)</span><br>University of Science and Technology of Southern Philippines</li>
+                                <li><span>Senior High School (2022-2023)</span><br>Saint Michael College of Caraga SHS<br></li>
+                                <li><span>Junior High School (2020-2021)</span><br>Saint Michael College of Caraga JHS<br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li>NO WORK EXPERIENCES</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-------------------PROJECTS---------------->
+    <section id="projects">
+        <div class="container">
+            <h1 class='sub-title'>My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <img src="images/website.png" class="website">
+                    <h2>LogIn/SignUp Page</h2>
+                    <p>I created a modern login/signup page that is pleasing to the eyes.
+                        It has currently no real functions.
+                    </p>
+                    <a href="#">Learn More</a>
                 </div>
                 <div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>  Python</span><br>Machine Learning</li>
-                            <li><span>Graphic Designing</span><br>Photomanipulation<br></li>
-                            <li><span>Microsoft Office</span><br>Word,Excel,PowerPoint<br></li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>College (2023-Present)</span><br>University of Science and Technology of Southern Philippines</li>
-                            <li><span>Senior High School (2022-2023)</span><br>Saint Michael College of Caraga SHS<br></li>
-                            <li><span>Junior High School (2020-2021)</span><br>Saint Michael College of Caraga JHS<br></li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li>NO WORK EXPERIENCES</li>
-                        </ul>
-                    </div>
+                    <img src="images/mlpython.png" class="mlpython">
+                    <h2>Basic Machine Learning</h2>
+                    <p>I created a modern login/signup page that is pleasing to the eyes.
+                        It has currently no real functions.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <img src="images/dlmode.png" class="dlmode">
+                    <h2>Dark/Light Mode</h2>
+                    <p>Dark and light Mode for this website.
+                    </p>
+                    <a href="#">Learn More</a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!---------------services--------------------->
-<div id="projects">
-    <div class="container">
-        <h1 class='sub-title'>My Projects</h1>
-        <div class="projects-list">
-            <div>
-                <img src="images/website.png" class="website">
-                <h2>LogIn/SignUp Page</h2>
-                <p>I created a modern login/signup page that is pleasing to the eyes.
-                    It has currently no real funcitons.
-                </p>
-                <a href="#">Learn More</a>
-            </div>
-            <div>
-                <img src="images/mlpython.png" class="mlpython ">
-                <h2>Basic Machine Learning</h2>
-                <p>I created a modern login/signup page that is pleasing to the eyes.
-                    It has currently no real funcitons.
-                </p>
-                <a href="#">Learn More</a>
-            </div>
-            <div>
-                <img src="images/dlmode.png" class="dlmode">
-                <h2>Dark/Light Mode</h2>
-                <p>Dark and light Mode for this website.
-                </p>
-                <a href="#">Learn More</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!------------------CONTACT ME------------------->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i>contact@example.com</p>
-                <p><i class="fa-solid fa-phone"></i>0912345679</p>
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </section>
+<!-----------------CONTACT------------->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>contact@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i>0912345679</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="downloadable/cvsample.pdf" download class="btn" id="download-btn">Download CV</a>
                 </div>
-                <a href="downloadable/cvsample.pdf" download class="btn" id="download-btn">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form>
-                    <input type="Name" placeholder="Your Name" required>
-                    <input type="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn submit">Submit</button>
-                </form>
+                <div class="contact-right">
+                    <form>
+                        <input type="Name" placeholder="Your Name" required>
+                        <input type="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn submit">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="copyright">
-        <p>Copyright © iRyllB/Bryll Bryan M. Pon. University of Science and Technology of Southern Philippines - CDO</p>
+        <div class="container">
+            <p>Copyright © iRyllB/Bryll Bryan M. Pon. University of Science and Technology of Southern Philippines - CDO</p>
+        </div>
     </div>
-</div>                                                   
-<script src="app.js"></script>
-
+    <script src="app.js"></script>
 </body>
 </html>
