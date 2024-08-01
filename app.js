@@ -1,110 +1,87 @@
-// Function to handle scroll and update the navbar appearance
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('nav');
-    const logo = document.querySelector('.logo');
-    const navItems = document.querySelectorAll('nav ul li');
-  
-    if (window.scrollY > 0) {
-      nav.classList.add('scrolled');
-      logo.classList.add('scrolled');
-      navItems.forEach(item => item.classList.add('scrolled'));
-    } else {
-      nav.classList.remove('scrolled');
-      logo.classList.remove('scrolled');
-      navItems.forEach(item => item.classList.remove('scrolled'));
+// TOGGLE DARKMODE
+function toggleDarkTheme() {
+  const icon = document.getElementById('darkmode');
+  const isDark = document.body.classList.toggle('dark-theme');
+  icon.src = isDark ? 'images/sun.png' : 'images/moon.png';
+}
+
+document.querySelectorAll('#darkmode, #dlmode').forEach(btn => {
+  btn.addEventListener('click', toggleDarkTheme);
+});
+
+// Handle scroll and update navbar appearance
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  const logo = document.querySelector('.logo');
+  const navItems = document.querySelectorAll('nav ul li');
+
+  const action = window.scrollY > 0 ? 'add' : 'remove';
+  nav.classList[action]('scrolled');
+  logo.classList[action]('scrolled');
+  navItems.forEach(item => item.classList[action]('scrolled'));
+});
+
+// ACTIVE LINK HIGHLIGHT
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+const observerOptions = { threshold: 0.5 };
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const navLink = document.querySelector(`nav ul li a[href="#${entry.target.id}"]`);
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      navLink.classList.add('active');
     }
   });
-  
-  // ACTIVE LINK HIGHLIGHT
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('nav ul li a');
-  
-  const observerOptions = {
-    threshold: 0.5
-  };
-  
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const id = entry.target.getAttribute('id');
-      const navLink = document.querySelector(`nav ul li a[href="#${id}"]`);
-  
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => link.classList.remove('active'));
-        navLink.classList.add('active');
-      }
-    });
-  }, observerOptions);
-  
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-  
-  //CLICK EVENT 
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      navLinks.forEach(link => link.classList.remove('active'));
-      this.classList.add('active');
-    });
-  });
-  
+}, observerOptions);
 
-//GIGGLE ANIMATION
+sections.forEach(section => observer.observe(section));
+
+// CLICK EVENT
+navLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    navLinks.forEach(link => link.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// GIGGLE ANIMATION
 const h1 = document.querySelector('.header-text h1');
 let slideInComplete = false;
-setTimeout(() => {
-    slideInComplete = true;
-}, 1500); 
-h1.addEventListener('mouseenter', function(event) {
-    if (event.target === h1 && slideInComplete) {
-        h1.classList.add('giggle');
-    }
+setTimeout(() => slideInComplete = true, 1500);
+
+h1.addEventListener('mouseenter', event => {
+  if (event.target === h1 && slideInComplete) {
+    h1.classList.add('giggle');
+  }
 });
-h1.addEventListener('animationend', function(event) {
-    if (event.animationName === 'giggle') {
-        h1.classList.remove('giggle');
-        void h1.offsetWidth; 
-    }
+h1.addEventListener('animationend', event => {
+  if (event.animationName === 'giggle') {
+    h1.classList.remove('giggle');
+    void h1.offsetWidth;
+  }
 });
 
+// ABOUT ME TABS
+const tabLinks = document.getElementsByClassName("tab-links");
+const tabContents = document.getElementsByClassName("tab-contents");
 
-//ABOUT ME
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
-
-function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove('active-link');
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove('active-tab');
-    }
-    event.currentTarget.classList.add('active-link');
-    document.getElementById(tabname).classList.add('active-tab');
+function opentab(tabname) {
+  [...tabLinks].forEach(tab => tab.classList.remove('active-link'));
+  [...tabContents].forEach(content => content.classList.remove('active-tab'));
+  event.currentTarget.classList.add('active-link');
+  document.getElementById(tabname).classList.add('active-tab');
 }
 
-//MENU
-var sidemenu =document.getElementById('sidemenu');
+// MENU
+const sidemenu = document.getElementById('sidemenu');
 
-function openmenu(){
-    sidemenu.style.right = '0';
-}
-function closemenu(){
-    sidemenu.style.right = '-200px';
+function openmenu() {
+  sidemenu.style.right = '0';
 }
 
-
-
-//DOWNLOAD CV - (CURRENTLY HAS NO EFFECT/FUNCTION. RESERVED FOR MORE COMPLEX DOWNLOADS)
-//document.getElementById('download').addEventListener('click', function(event) {
- //   event.preventDefault();
-
-   // var link = document.createElement('a');
-    //link.href = 'downloadable/cvsample.pdf';
-  //  link.download = 'Curriculum Vitae Example.pdf';
-
-  //  document.body.appendChild(link);
-
-   // link.click();
-
-   // document.body.removeChild(link);
-//});
+function closemenu() {
+  sidemenu.style.right = '-200px';
+}

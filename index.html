@@ -5,25 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png">
     <script src="https://kit.fontawesome.com/c195c0411b.js" crossorigin="anonymous"></script>
+    <script defer src="app.js"></script>
 </head>
 <body>
 <!------------HEADER/HOME------------->
-    <section id="header">
+    <section id="header" class="hidden">
         <div class="container">
             <nav>   
                 <a href="#header">
                     <img src="images/logo.png" class="logo" alt="logo">
                 </a>                
                 <ul id="sidemenu">
-                    <li><a href="#header" >Home</a></li>
+                    <li><a href="#header">Home</a></li>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">My Projects</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                <img src="images/moon.png" id="darkmode">
+                <img src="images/moon.png" id="darkmode" alt="Toggle Dark Mode">
             </nav>
             <div class="header-text">
                 <p>A University Student</p>
@@ -32,11 +34,11 @@
         </div>
     </section>
 <!-------------ABOUT--------------->
-    <section id="about">
+    <section id="about" class="hidden">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/aboutme.png" alt="">
+                    <img src="images/aboutme.png" alt="About Me">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -54,15 +56,15 @@
                         <div class="tab-contents active-tab" id="skills">
                             <ul>
                                 <li><span>Python</span><br>Machine Learning</li>
-                                <li><span>Graphic Designing</span><br>Photomanipulation<br></li>
-                                <li><span>Microsoft Office</span><br>Word, Excel, PowerPoint<br></li>
+                                <li><span>Graphic Designing</span><br>Photomanipulation</li>
+                                <li><span>Microsoft Office</span><br>Word, Excel, PowerPoint</li>
                             </ul>
                         </div>
                         <div class="tab-contents" id="education">
                             <ul>
                                 <li><span>College (2023-Present)</span><br>University of Science and Technology of Southern Philippines</li>
-                                <li><span>Senior High School (2022-2023)</span><br>Saint Michael College of Caraga SHS<br></li>
-                                <li><span>Junior High School (2020-2021)</span><br>Saint Michael College of Caraga JHS<br></li>
+                                <li><span>Senior High School (2022-2023)</span><br>Saint Michael College of Caraga SHS</li>
+                                <li><span>Junior High School (2020-2021)</span><br>Saint Michael College of Caraga JHS</li>
                             </ul>
                         </div>
                         <div class="tab-contents" id="experience">
@@ -76,32 +78,29 @@
         </div>
     </section>
 <!-------------------PROJECTS---------------->
-    <section id="projects">
+    <section id="projects" class="hidden">
         <div class="container">
-            <h1 class='sub-title'>My Projects</h1>
+            <h1 class="sub-title">My Projects</h1>
             <div class="projects-list">
                 <div>
-                    <img src="images/website.png" class="website">
+                    <img src="images/website.png" class="website" alt="LogIn/SignUp Page">
                     <h2>LogIn/SignUp Page</h2>
                     <p>I created a modern login/signup page that is pleasing to the eyes.
-                        It has currently no real functions.
-                    </p>
+                        It has currently no real functions. </p>
                     <a href="#">Learn More</a>
                 </div>
                 <div>
-                    <img src="images/mlpython.png" class="mlpython">
+                    <img src="images/mlpython.png" class="mlpython" alt="Basic Machine Learning">
                     <h2>Basic Machine Learning</h2>
                     <p>I created a modern login/signup page that is pleasing to the eyes.
-                        It has currently no real functions.
-                    </p>
+                        It has currently no real functions.</p>
                     <a href="#">Learn More</a>
                 </div>
-                <div>
-                    <img src="images/dlmode.png" class="dlmode">
+                <div id="dlmode">
+                    <img src="images/dlmode.png" class="dlmode" alt="Dark/Light Mode">
                     <h2>Dark/Light Mode</h2>
-                    <p>Dark and light Mode for this website.
-                    </p>
-                    <a href="#">Learn More</a>
+                    <p>Dark and light Mode for this website.</p>
+                    <p id="p2">You may click this box or the sun/moon icon to toggle it.</p>
                 </div>
             </div>
         </div>
@@ -112,8 +111,8 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope"></i>contact@example.com</p>
-                    <p><i class="fa-solid fa-phone"></i>0912345679</p>
+                    <p><i class="fa-solid fa-envelope"></i> contact@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 0912345679</p>
                     <div class="social-icons">
                         <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -124,9 +123,9 @@
                 </div>
                 <div class="contact-right">
                     <form>
-                        <input type="Name" placeholder="Your Name" required>
-                        <input type="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn submit">Submit</button>
                     </form>
                 </div>
@@ -138,6 +137,5 @@
             <p>Copyright © iRyllB/Bryll Bryan M. Pon. University of Science and Technology of Southern Philippines - CDO</p>
         </div>
     </div>
-    <script src="app.js"></script>
 </body>
 </html>
