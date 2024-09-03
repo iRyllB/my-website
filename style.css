@@ -160,6 +160,7 @@ nav ul li a.active::after {
     color: var(--secondary-color);
   }
 }
+/*---------------------------------------------------------------ABOUT ME*/
 #about {
   padding: 80px 0;
   color: rgb(187, 187, 187);
@@ -226,6 +227,7 @@ nav ul li a.active::after {
 .tab-contents.active-tab {
   display: block;
 }
+/*----------------------------------------------------------------projects*/
 #projects {
   padding: 30px 0;
 }
@@ -264,7 +266,7 @@ nav ul li a.active::after {
 .projects-list div a {
   text-decoration: none;
   color: var(--text-color);
-  font-size: 12px;
+  font-size: 15px;
   margin-top: 20px;
   display: inline-block;
 }
@@ -273,6 +275,16 @@ nav ul li a.active::after {
   transform: translateY(-10px);
   cursor: pointer;
 }
+#wb.view-link {
+  color: #3f9cff; 
+  text-decoration: none;
+  transition: color 0.3s; 
+}
+
+#wb.view-link:hover {
+  color: #043b75;
+}
+/*----------------------------------------------------CONTACT*/
 .contact.left {
   flex-basis: 35%;
 }
@@ -357,9 +369,10 @@ form input, form textarea {
 nav .fa-solid {
   display: none;
 }
+/*-----------------------------------------------------------------functionality*/
 @media only screen and (max-width: 600px) {
   #darkmode {
-    margin-left: 20px; /* Adjust spacing between logo and darkmode icon */
+    margin-left: 20px; 
     cursor: pointer;
   }
   .logo {
@@ -377,7 +390,7 @@ nav .fa-solid {
     font-size: 25px;
     position: absolute;
     top: 25px;
-    right: 25px; /* Adjust the icon position to the right */
+    right: 25px; 
     cursor: pointer;
   }
   nav ul {

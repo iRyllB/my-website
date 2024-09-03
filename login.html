@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn/SignUp</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="images/icon.png">
+    <script src="https://kit.fontawesome.com/c195c0411b.js" crossorigin="anonymous"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+
+    <div class = "main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        
+        <div class="SignUp">
+            <form>
+                <label for="chk" aria-hidden="true">Sign Up</label>
+                <input type="text" name="txt" placeholder="Username" required="">
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="password" placeholder="Password" required="">
+                <button>SignUp</button>
+            </form>
+        </div>
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">Log In</label>
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="password" placeholder="Password" required="">
+                <button>LogIn</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

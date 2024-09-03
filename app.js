@@ -8,7 +8,7 @@ function toggleDarkTheme() {
 document.querySelectorAll('#darkmode, #dlmode').forEach(btn => {
   btn.addEventListener('click', toggleDarkTheme);
 });
-
+ 
 // Handle scroll and update navbar appearance
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
