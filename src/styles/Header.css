@@ -1,63 +1,92 @@
-/* IMPORT FONTS (IMPORTANT) */
+/* =========================
+   FONTS
+========================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&display=swap');
 
-/* HEADER BASE */
+/* =========================
+   RESET (important)
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   HEADER (1440 → responsive)
+========================= */
 .header {
-  width: 1280px;
+  width: 100%;
   height: 88px;
-  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  background: #FFFFFF;
   backdrop-filter: blur(6px);
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px 64px;
-  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s;
+}
+.header--scrolled {
+  background: transparent;
+  backdrop-filter: blur(16px);
 }
 
-/* INNER CONTAINER */
+
+/* =========================
+   INNER CONTAINER (FIGMA EXACT)
+========================= */
 .header-inner {
-  width: 1152px;
-  max-width: 1152px;
+  width: 100%;
+  max-width: 1312px;
   height: 88px;
-
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-
-  padding: 24px 48.02px 24px 48px;
-  box-sizing: border-box;
+  justify-content: center;
+  padding: 24px 48px;
+  gap: 48px;
 }
 
-/* LOGO */
+
+/* =========================
+   LOGO
+========================= */
 .logo {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   letter-spacing: -1.2px;
-  color: #18181B;
 
+  color: #18181B;
   display: flex;
   align-items: center;
 }
 
-.logo-bold {
+.logo-accent {
   color: #F59E0B;
 }
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 .nav {
   display: flex;
   align-items: center;
 }
+.nav--centered {
+  flex: 1;
+  justify-content: center;
+}
+
 
 /* BASE LINK */
 .nav-link {
   font-family: 'Inter', sans-serif;
+  font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+
   letter-spacing: 0.6px;
   text-transform: uppercase;
 
@@ -68,47 +97,100 @@
   align-items: center;
 
   padding-bottom: 4px;
+
+  transition: all 0.2s ease;
 }
 
-/* spacing EXACT from figma */
+/* EXACT FIGMA SPACING */
 .nav-link:not(:first-child) {
   margin-left: 48px;
 }
 
-/* ACTIVE LINK */
+/* ACTIVE */
 .nav-link.active {
   font-weight: 700;
   color: #D97706;
   border-bottom: 2px solid #F59E0B;
 }
 
-/* BUTTON */
+/* HOVER (subtle modern) */
+.nav-link:hover {
+  color: #18181B;
+}
+
+/* =========================
+   CTA BUTTON
+========================= */
 .cta-btn {
   width: 144.17px;
   height: 40px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #F29000;
-  border-radius: 9999px;
-  border: none;
+  padding: 12px 32px;
+
 
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
+
   letter-spacing: 1.2px;
   text-transform: uppercase;
 
-  color: #ffffff;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+
+  transition: all 0.2s ease;
+    background: #F29000;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    padding: 0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.18);
+    font-size: 14px;
+    line-height: 40px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* OPTIONAL HOVER (subtle, still pixel-safe) */
+/* HOVER */
 .cta-btn:hover {
-  background: #d97706;
+    background: transparent;
+    color: #F29000;
+    border: 2px solid #F29000;
+    transform: scale(1.08);
+    box-shadow: 0 2px 8px rgba(242, 144, 0, 0.15);
+}
+
+/* =========================
+   RESPONSIVE (MODERN BEHAVIOR)
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .header-inner {
+    padding: 20px 32px;
+  }
+
+  .nav-link:not(:first-child) {
+    margin-left: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* you can replace with hamburger later */
+  }
+
+  .header-inner {
+    padding: 16px 24px;
+  }
+
+  .cta-btn {
+    width: auto;
+    padding: 10px 20px;
+  }
 }
