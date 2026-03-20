@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -79,16 +80,7 @@ const Home: React.FC = () => {
         <button>GET IN TOUCH</button>
       </section>
 
-      {/* FOOTER */}
-      <footer className="footer">
-        <div>CREATIVE_TECH</div>
-        <div className="links">
-          <a>DRIBBBLE</a>
-          <a>GITHUB</a>
-          <a>LINKEDIN</a>
-        </div>
-        <div className="copy">© 2024 CREATIVE TECHNOLOGIST</div>
-      </footer>
+      <Footer />
     </div>
   );
 };

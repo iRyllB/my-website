@@ -1,72 +1,114 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
+/* IMPORT FONTS (IMPORTANT) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&display=swap');
+
+/* HEADER BASE */
+.header {
+  width: 1280px;
+  height: 88px;
+  background: #ffffff;
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 64px;
   box-sizing: border-box;
 }
 
-.header {
-  width: 100%;
-  background-color: #f3f3f3;
-  border-bottom: 1px solid #e0e0e0;
+/* INNER CONTAINER */
+.header-inner {
+  width: 1152px;
+  max-width: 1152px;
+  height: 88px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px 48.02px 24px 48px;
+  box-sizing: border-box;
 }
 
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 14px 24px;
+/* LOGO */
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -1.2px;
+  color: #18181B;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-/* Logo */
-.logo {
-  font-size: 20px;
-  font-weight: 700;
-  color: #333;
+.logo-bold {
+  color: #F59E0B;
 }
 
-.logo-highlight {
-  color: #f59e0b; /* orange */
-}
-
-/* Navigation */
+/* NAVIGATION */
 .nav {
   display: flex;
-  gap: 32px;
+  align-items: center;
 }
 
+/* BASE LINK */
 .nav-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  color: #52525B;
   text-decoration: none;
-  font-size: 14px;
-  color: #6b7280; /* gray */
-  font-weight: 700;
-  transition: color 0.2s ease;
+
+  display: flex;
+  align-items: center;
+
+  padding-bottom: 4px;
 }
 
-.nav-link:hover {
-  color: #111;
+/* spacing EXACT from figma */
+.nav-link:not(:first-child) {
+  margin-left: 48px;
 }
 
+/* ACTIVE LINK */
 .nav-link.active {
-  color: #f59e0b;
-  font-weight: 500;
+  font-weight: 700;
+  color: #D97706;
+  border-bottom: 2px solid #F59E0B;
 }
 
-/* Button */
-.cta-button {
-  background-color: #f59e0b;
-  color: white;
+/* BUTTON */
+.cta-btn {
+  width: 144.17px;
+  height: 40px;
+
+  background: #F29000;
+  border-radius: 9999px;
   border: none;
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: 14px;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition: background 0.2s ease;
 }
 
-.cta-button:hover {
-  background-color: #d97706;
+/* OPTIONAL HOVER (subtle, still pixel-safe) */
+.cta-btn:hover {
+  background: #d97706;
 }
