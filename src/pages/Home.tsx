@@ -1,19 +1,11 @@
 import React from "react";
 import "../styles/Home.css";
+import Header from "../components/Header";
 
 const Home: React.FC = () => {
   return (
     <div className="home">
-      {/* NAVBAR */}
-      <header className="navbar">
-        <div className="logo">CREATIVE_TECH</div>
-        <nav>
-          <a className="active">Home</a>
-          <a>About</a>
-          <a>Contact</a>
-        </nav>
-        <div className="menu">≡</div>
-      </header>
+      <Header />
 
       {/* HERO */}
       <section className="hero">
