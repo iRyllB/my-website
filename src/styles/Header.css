@@ -183,7 +183,7 @@
 /* Mobile */
 @media (max-width: 768px) {
   .nav {
-    display: none; /* you can replace with hamburger later */
+    display: none;
   }
 
   .header-inner {
@@ -191,7 +191,46 @@
   }
 
   .cta-btn {
-    width: auto;
-    padding: 10px 20px;
+    display: none;
   }
+
+  .header-hamburger {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+}
+
+/* Desktop only: hide hamburger */
+@media (min-width: 769px) {
+  .header-hamburger {
+    display: none;
+  }
+}
+
+/* Side panel nav styles */
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 48px;
+}
+.side-nav-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #18181B;
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 1px solid #f3f3f3;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.side-nav-link:hover {
+  color: #f29000;
+}
+.side-cta {
+  width: 100%;
+  font-size: 16px;
+  padding: 16px 0;
 }
