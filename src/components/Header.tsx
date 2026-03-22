@@ -17,7 +17,7 @@ const Header: React.FC = () => {
       <div className="header-inner">
         {/* Logo */}
         <div className="logo">
-          <span className="logo-accent">Port</span>folio
+          <span className="logo-accent">I</span>ryllB
         </div>
         {/* Navigation - centered selections */}
         <nav className="nav nav--centered">

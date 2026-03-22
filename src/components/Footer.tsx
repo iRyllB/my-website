@@ -1,53 +1,60 @@
 import React from "react";
 import "../styles/Footer.css";
-import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
-        
-        {/* Left Section */}
-        <div className="footer-left">
-          <h2 className="footer-logo">
-            <span>Port</span>folio
-          </h2>
-          <p className="footer-description">
-            Crafting digital experiences through graphic design and web
-            development. Let's build something remarkable together.
-          </p>
-        </div>
+      <div className="footer-inner">
 
-        {/* Middle Section */}
-        <div className="footer-nav">
-          <h4>NAVIGATION</h4>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Portfolio</a>
-          <a href="#">Contact</a>
-        </div>
+        {/* TOP SECTION */}
+        <div className="footer-top">
 
-        {/* Right Section */}
-        <div className="footer-social-copyright">
-          <div className="footer-social">
-            <h4>CONNECT</h4>
-            <div className="social-icons">
-              <div className="icon"><FaGithub /></div>
-              <div className="icon"><FaLinkedinIn /></div>
-              <div className="icon"><FaTwitter /></div>
-              <div className="icon"><FaInstagram /></div>
+          {/* LEFT COLUMN */}
+          <div className="footer-brand">
+            <h2 className="footer-logo">Portfolio</h2>
+            <p className="footer-text">
+              Design Wiz is a boutique digital agency specialized in
+              creating high-impact brand identities and web solutions
+              for forward-thinking companies.
+            </p>
+          </div>
+
+          {/* NAVIGATION */}
+          <div className="footer-nav">
+            <h5 className="footer-heading">Navigation</h5>
+            <ul className="footer-list">
+              <li>Home</li>
+              <li>About</li>
+              <li>Portfolio</li>
+              <li>Contact</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+
+          {/* CONNECT */}
+          <div className="footer-connect">
+            <h5 className="footer-heading">Connect</h5>
+            <div className="footer-socials">
+              <div className="social-circle"></div>
+              <div className="social-circle"></div>
+              <div className="social-circle"></div>
             </div>
           </div>
-          <div className="footer-copyright">
-            <p>© 2026 Portfolio. All rights reserved.</p>
-          </div>
+
         </div>
 
-      </div>
+        {/* BOTTOM BORDER + ROW */}
+        <div className="footer-bottom">
+          <p className="footer-copy">
+            © 2026 DESIGN WIZ. CRAFTED WITH KINETIC PRECISION.
+          </p>
 
-      {/* Bottom Bar */}
-      <div className="footer-bottom">
-        <p>Designed & Developed with passion</p>
+          <a href="#top" className="footer-back">
+            BACK TO TOP
+            <span className="arrow"></span>
+          </a>
+        </div>
+
       </div>
     </footer>
   );
