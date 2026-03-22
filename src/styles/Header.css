@@ -28,8 +28,9 @@
   transition: background 0.3s;
 }
 .header--scrolled {
-  background: transparent;
+  background: rgba(255,255,255,0.7); /* Semi-transparent white for subtle effect */
   backdrop-filter: blur(16px);
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.06); /* Subtle shadow for separation */
 }
 
 
