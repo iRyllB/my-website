@@ -53,7 +53,7 @@ export default function About() {
         <div className="about-intro">
           <div className="about-copy">
             <p className="about-kicker">What I Do</p>
-            <h2 className="about-title">Bold visuals, clear systems, and thoughtful interactions.</h2>
+            <h2 className="about-title">Bold visualss, clear systems, and thoughtful interactions.</h2>
             <p className="about-description">
               I combine visual design, clean engineering, and responsive thinking to build
               websites that feel intentional on every screen size.
