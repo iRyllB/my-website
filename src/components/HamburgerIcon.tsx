@@ -1,5 +1,3 @@
-import React from "react";
-
 const HamburgerIcon = ({ onClick }: { onClick: () => void }) => (
   <button
     className="hamburger-icon"
