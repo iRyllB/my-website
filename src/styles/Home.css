@@ -1,0 +1,210 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0b0b;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+nav .active {
+  color: #ff9d00;
+}
+
+.menu {
+  font-size: 20px;
+}
+
+/* HERO */
+.hero {
+  padding: 60px;
+}
+
+.archive {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+}
+
+.hero span {
+  color: #ff9d00;
+  font-style: italic;
+}
+
+.filters {
+  margin-top: 30px;
+}
+
+.filters button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.filters .active {
+  background: #ff9d00;
+  color: #000;
+  border: none;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 60px;
+}
+
+.card {
+  background: #111;
+  position: relative;
+}
+
+/* LARGE */
+.large {
+  height: 300px;
+  background: #111;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.overlay h3 {
+  font-size: 22px;
+}
+
+.overlay p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* IMAGE */
+.image img {
+  width: 100%;
+  display: block;
+}
+
+.card-text {
+  padding: 15px;
+}
+
+/* CODE */
+.code {
+  height: 200px;
+  background: #000;
+}
+
+.code-box {
+  padding: 20px;
+}
+
+.code-box p {
+  color: #ff9d00;
+  font-size: 12px;
+}
+
+/* GREEN */
+.green {
+  background: linear-gradient(135deg, #1d3f2d, #0b1f15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.text {
+  padding: 20px;
+}
+
+.text small {
+  color: #ff9d00;
+}
+
+.text p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* CTA */
+.cta {
+  margin: 80px 60px;
+  text-align: center;
+  background: #111;
+  padding: 60px;
+}
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.cta button {
+  background: #ff9d00;
+  border: none;
+  padding: 12px 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-size: 12px;
+}
+
+.links a {
+  margin: 0 10px;
+  cursor: pointer;
+}
