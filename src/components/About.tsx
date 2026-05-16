@@ -47,6 +47,17 @@ const offerings = [
 ];
 
 export default function About() {
+  // Map offering title to route path
+  const routeMap: Record<string, string> = {
+    "Graphic Design": "/graphic-design",
+    "Web Development": "/web-development",
+    "UI / UX Design": "/ui-ux-design",
+  };
+
+  const handleOpenNewTab = (path: string) => {
+    window.open(path, "_blank");
+  };
+
   return (
     <section className="about" id="about">
       <div className="about-container">
@@ -65,7 +76,18 @@ export default function About() {
 
         <div className="about-grid">
           {offerings.map((item) => (
-            <article className="about-card" key={item.title} data-tone={item.tone}>
+            <article
+              className="about-card"
+              key={item.title}
+              data-tone={item.tone}
+              tabIndex={0}
+              role="button"
+              style={{ cursor: "pointer" }}
+              onClick={() => handleOpenNewTab(routeMap[item.title])}
+              onKeyDown={e => {
+                if (e.key === "Enter" || e.key === " ") handleOpenNewTab(routeMap[item.title]);
+              }}
+            >
               <div className="about-icon" aria-hidden="true">
                 {iconMap[item.title]}
               </div>
